@@ -24,4 +24,9 @@ public class EpgService implements IEpgService {
 		return epgDAO.getEpg();
 	}
 
+	@Override
+	public List<Epg> getEpgByServiceId(int serviceId) {
+		return epgDAO.getEpgByServiceId(serviceId);
+	}
+
 }

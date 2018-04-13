@@ -7,6 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -61,6 +62,12 @@ public class RestApiController {
     @RequestMapping(value = "/epg/", method = RequestMethod.GET)
     public ResponseEntity<List<Epg>> getEpg(){
     	List<Epg> epg = epgService.getEpg();
+    	return new ResponseEntity<List<Epg>>(epg, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = "/epg/{serviceId}", method = RequestMethod.GET)
+    public ResponseEntity<List<Epg>> getEpgByServiceId(@PathVariable("serviceId") Integer serviceId){
+    	List<Epg> epg = epgService.getEpgByServiceId(serviceId);
     	return new ResponseEntity<List<Epg>>(epg, HttpStatus.OK);
     }
     

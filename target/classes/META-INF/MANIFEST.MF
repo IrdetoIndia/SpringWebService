@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: SpringWebService
 Implementation-Version: 1.0.0
-Built-By: ashish
+Built-By: ashish.dandriyal
 Implementation-Vendor-Id: com.irdeto.androidtv
-Build-Jdk: 1.8.0_162
+Build-Jdk: 1.8.0_144
 Implementation-URL: http://projects.spring.io/spring-boot/SpringWebSer
  vice/
 Created-By: Maven Integration for Eclipse

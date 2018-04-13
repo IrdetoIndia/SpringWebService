@@ -28,4 +28,10 @@ public class EpgDAO implements IEpgDAO {
 		return (List<Epg>) entityManager.createQuery(hql).getResultList();
 	}
 
+	@Override
+	public List<Epg> getEpgByServiceId(int serviceId) {
+		String hql = "FROM Epg as e ORDER BY e.epgId DESC WHERE e.serviceId = ?";
+		return (List<Epg>) entityManager.createQuery(hql).getResultList();
+	}
+
 }

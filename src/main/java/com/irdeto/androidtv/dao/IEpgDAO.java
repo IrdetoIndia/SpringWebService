@@ -7,4 +7,5 @@ import com.irdeto.androidtv.entity.Epg;
 public interface IEpgDAO {
 	void addEpg(Epg epg);
 	List<Epg> getEpg();
+	List<Epg> getEpgByServiceId(int serviceId);
 }
