@@ -20,7 +20,7 @@ public class Epg {
 	private String title;
 
 	@Column(name="service_id")
-	private String serviceId;
+	private int serviceId;
 
 	@Column(name="source_url")
 	private String sourceUrl;
@@ -70,11 +70,11 @@ public class Epg {
 	public void setImageUrl(String imageUrl) {
 		this.imageUrl = imageUrl;
 	}
-	public String getServiceId() {
+	public int getServiceId() {
 		return serviceId;
 	}
 
-	public void setServiceId(String serviceId) {
+	public void setServiceId(int serviceId) {
 		this.serviceId = serviceId;
 	}
 
