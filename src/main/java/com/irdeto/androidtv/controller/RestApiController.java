@@ -65,7 +65,7 @@ public class RestApiController {
     	return new ResponseEntity<List<Epg>>(epg, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "/epg/{serviceId}", method = RequestMethod.GET)
+    @RequestMapping(value = "/epg/filter/{serviceId}", method = RequestMethod.GET)
     public ResponseEntity<List<Epg>> getEpgByServiceId(@PathVariable("serviceId") Integer serviceId){
     	List<Epg> epg = epgService.getEpgByServiceId(serviceId);
     	return new ResponseEntity<List<Epg>>(epg, HttpStatus.OK);
